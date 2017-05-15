@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+	<!-- import easeljs -->
+	<script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>  	
+	<!-- import processing -->
+	<script src="Functions.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!-- import stylesheet -->
+	
+	<link href = "https://lh6.googleusercontent.com/-el6-6ssKjms/Vb7eL7whOgI/AAAAAAAABek/6BTXXKem8KM/s16-no/agnesFavicon.ico" rel = "icon" type = "image/x-icon" />
+	<!-- import favicon -->
+	
+	<!-- import VT323 font from google (now working) -->
+	<script type="text/javascript">
+  		WebFontConfig = {
+  			google: {
+  			families: [ 'VT323::latin' ]
+  			}
+ 		};
+  		(function() {
+    		var wf = document.createElement('script');
+    		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    		wf.type = 'text/javascript';
+    		wf.async = 'true';
+    		var s = document.getElementsByTagName('script')[0];
+    		s.parentNode.insertBefore(wf, s);
+  		})();
+  	</script>
+	
+	<title>CyberWorld</title>
+
+
+	<center><h5>CyberWorld: ESCape from Reality</h5></center>
+
+</head>
+
+<body>
+	<div id="question2">
+		<br>
+		Now that we have a variable, lets do something with it! We can multiply using a *
+		<br>omg= 
+		<span id="printomg"></span>
+		<br>lol= <span id= "printlol"></span><br>What is omg*lol?
+		<form name="q2" action="javascript:checkRight()">
+			<input id="q2" type="text" name="ans">
+		</form>
+		</p>
+		<br>
+	<script >
+	// this is how you do random numbers (needs Math.) 
+	//this is javascript NOT processing
+		var omg = Math.round((Math.random()*10));
+		var lol = Math.round((Math.random()*10));
+		// console.log(lol); 
+		document.getElementById("printomg").innerHTML = omg;
+		document.getElementById("printlol").innerHTML = lol; 
+	</script>	
+	</div>
+
+	<a href="EndScreen.html" id="submit1">YOU WIN!</button>
+
+</body>
+</html>
+
