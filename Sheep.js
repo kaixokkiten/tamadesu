@@ -7,3 +7,11 @@
 function turnpotato(){
 	$("#tama").hide();
 }
+
+// $("#image").click( function(){
+// alert("CLICKED");
+// });
+
+function dosomething() {
+	alert("I DID SOMETHING");
+}
