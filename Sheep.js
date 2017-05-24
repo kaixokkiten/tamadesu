@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	alert("click on the button that says \"Click me!!!\"")
+	// alert("click on the button that says \"Click me!!!\"");//annoying
     // $("#click").click(function(){
     //     $("#tama").hide();
     // }); //working, but compiler complains   
@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 function disappear(){
 	$("#tama").hide();
-	alert("press the center button on the game console!")
+	//alert("press the center button on the game console!") //annoying
 }
 
 // $("#image").click( function(){
