@@ -9,10 +9,11 @@
 		<script src="Sheep.js"></script>
 	</head>
 	<body style="background-color:black">
-		<div style="text-align:center">
-			<img src= "tamagotchi_base.png" id= "tama" align="middle">
+		<div id="template" style="text-align:center">
+			<img src="tamagotchi_base.png" id="tama" usemap="buttons" align="middle">
 		</div>
-		<button id= "click" onclick="turnpotato()">Click me!!!</button>
-		<p id="demo"></p>
+		<map name="buttons">
+			<area shape="circle" coords="170,390,30" onclick="dosomething()">
+		</map>
 	</body>
 </html>
