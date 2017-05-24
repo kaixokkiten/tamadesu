@@ -1,11 +1,13 @@
-// $(document).ready(function(){
-//     $("#click").click(function(){
-//         $("#tama").hide();
-//     });    
-// });
+$(document).ready(function(){
+	// alert("click on the button that says \"Click me!!!\"");//annoying
+    // $("#click").click(function(){
+    //     $("#tama").hide();
+    // }); //working, but compiler complains   
+});
 
-function turnpotato(){
+function disappear(){
 	$("#tama").hide();
+	//alert("press the center button on the game console!") //annoying
 }
 
 // $("#image").click( function(){

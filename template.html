@@ -2,14 +2,26 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<!--
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
 		<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
-		<script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
-		<script src="Sheep.js"></script>
+		<script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>  
+		-->
+		<!-- uncomment this above section if the internet is working -->
+
+		<script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="tweenjs-0.6.1.min.js" type="text/javascript"></script>
+		<script src="easeljs-0.8.1.min.js" type="text/javascript"></script>
+		<script src="processing.js" type="text/javascript"></script> 
+		<!-- use this above block in case internet goes down ohh nooo -->
+
+		<script src="Sheep.js"></script> <!--custom javascript yay-->
 	</head>
-	<body style="background-color:black">
-		<div style="text-align:center">
+	<body>
+	<!--	<button id= "click" onclick= "disappear()" style="text-align:center;height:100px;width:300px; background-color:green;">Click me!!!</button>
+	-->
+		<div>
 			<img src="tamagotchi_base.png" id="tama" usemap="buttons">
 		</div>
 		<map name="buttons">
