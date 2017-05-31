@@ -17,18 +17,28 @@
 		<!-- use this above block in case internet goes down ohh nooo -->
 
 		<script src="Sheep.js"></script> <!--custom javascript yay-->
-		<link rel="stylesheet" href="Alpaca.css">
+		<link rel="stylesheet" href="Alpaca.css"> <!-- CSS style sheet -->
 	</head>
 	<body>
 	<!--	<button id= "click" onclick= "disappear()" style="text-align:center;height:100px;width:300px; background-color:green;">Click me!!!</button>
 	-->
 		<div>
 			<img src="tamagotchi_base.png" id="tama" usemap="buttons">
+			<img src="hamtaro_01.png" id="pet">
 		</div>
 		<map name="buttons">
-			<area shape="circle" coords="104,375,27" onclick="dosomething()">
-			<area shape="circle" coords="177,392,27" onclick="dosomething()">
+			<area shape="circle" coords="104,375,27" onclick="change()">
+			<area shape="circle" coords="177,392,27" onclick="feed()">
 			<area shape="circle" coords="252,376,27" onclick="dosomething()">
 		</map>
+		
+		<p id="status">status: ALIVE<p>
+		<p id="age">age: 0<p>
+		<p id="hunger">hunger: 0<p>
+		<button id="start" onclick="startGame()">Click to start.</button>
+		<p id="rules">Pet will die of old age at age 20.</p>
+		<p id="rules">Pet will die of starvation at hunger 100.</p>
+		<p id="rules">Pet can die of overeating.</p>
+		<p id="rules">Click the middle button to feed.</p>
 	</body>
 </html>
