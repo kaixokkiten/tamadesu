@@ -1,11 +1,35 @@
 body {
 	background-color:black;
+	font-size: 1.5em;
+	font-family: arial;
 }
-div {
+div#info {
 	text-align:center;
 }
 
-p{color:white;}
+div#rules {
+	font-size: .8em;
+}
+
+div#fullness_meter {
+	width:200px;
+	height:20px;
+	background-color:white;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:auto;
+	left: 0;
+	right: 0;
+	top: 650px;
+	
+	font-size: 0.7em;
+	color:black;
+}
+
+p {
+	color:white;
+}
 
 img {
 	position: absolute;
@@ -19,9 +43,6 @@ img {
 	bottom: 0;
 }
 img#pet {
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
+	width:auto;
+	height:auto;
 }

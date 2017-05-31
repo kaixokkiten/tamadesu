@@ -20,25 +20,33 @@
 		<link rel="stylesheet" href="Alpaca.css"> <!-- CSS style sheet -->
 	</head>
 	<body>
-	<!--	<button id= "click" onclick= "disappear()" style="text-align:center;height:100px;width:300px; background-color:green;">Click me!!!</button>
-	-->
-		<div>
+		<div id="info">
 			<img src="tamagotchi_base.png" id="tama" usemap="buttons">
 			<img src="hamtaro_01.png" id="pet">
+			<p id="status" class="mid">status: ALIVE<p>
+			<p id="age" class="mid">age: 0<p>
+			<div id="fullness_meter">FULLNESS</div>
 		</div>
+		
 		<map name="buttons">
 			<area shape="circle" coords="104,375,27" onclick="change()">
 			<area shape="circle" coords="177,392,27" onclick="feed()">
 			<area shape="circle" coords="252,376,27" onclick="dosomething()">
 		</map>
 		
-		<p id="status">status: ALIVE<p>
-		<p id="age">age: 0<p>
-		<p id="hunger">hunger: 0<p>
-		<button id="start" onclick="startGame()">Click to start.</button>
-		<p id="rules">Pet will die of old age at age 20.</p>
-		<p id="rules">Pet will die of starvation at hunger 100.</p>
-		<p id="rules">Pet can die of overeating.</p>
-		<p id="rules">Click the middle button to feed.</p>
+		<p>--  <button id="start" onclick="startGame()">Click to start.</button></p>
+		<div id="rules">
+		<p>Pet can die of old age.</p>
+		<p>Pet can die of starvation.</p>
+		<p>Pet can die of overeating.</p>
+		<p>--</p>
+		<p>Click the middle button to feed.</p>
+		<p>--</p>
+		</div>
+		<button onclick="hamtaro()">hamtaro</button>
+		<button onclick="pettype()">pet type</button>
+		<br/>
+		<button onclick="template00()">TEMPLATE00</button>
+		<button onclick="template01()">TEMPLATE01</button>
 	</body>
 </html>
