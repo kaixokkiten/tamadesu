@@ -20,9 +20,10 @@ function change() {
 
 //TAMA
 var pet = {
-	type:"cat",
+	type:"hamtaro",
 	age:0,
-	fullness:100
+	fullness:100,
+	alive:"true"
 }
 
 function startGame() {
@@ -37,6 +38,7 @@ function updateHunger() {
 	if (pet.fullness<=0) {
 		clearInterval(hungry);
 		clearInterval(old);
+		pet.alive="false";
 		//death animation
 		alert("Your pet has died of starvation.");
 		document.getElementById("status").innerHTML = "status: DEAD [starvation]";
@@ -48,14 +50,21 @@ function feed() {
 		clearInterval(hungry);
 		clearInterval(old);
 		//death animation
-		alert("Your pet has died of overeating.");
+		if (pet.alive=="true") {
+			document.getElementById("pet").src = pet.type + "_death.gif";
+			pet.alive="false";
+		}
 		document.getElementById("status").innerHTML = "status: DEAD [overfed]";
 	} else if (pet.fullness>80) {
 		//feeding animation
+		 document.getElementById("pet").src = pet.type + "_feed.gif";
 		pet.fullness = 100;
+		 setTimeout(idle, 1000);
 	} else {
 		//feeding animation
+		 document.getElementById("pet").src = pet.type + "_feed.gif";
 		pet.fullness+=20;
+		 x = setTimeout(idle, 1000);
 	}
 }
 
@@ -66,7 +75,11 @@ function updateAge() {
 		clearInterval(old);
 		clearInterval(hungry);
 		//death animation
-		alert("Your pet has died of old age.");
+		if (pet.alive=="true") {
+			document.getElementById("pet").src = pet.type + "_death.gif";
+			pet.alive="false";
+		}
+		//alert("Your pet has died of old age.");
 		document.getElementById("status").innerHTML = "status: DEAD [old age]";
 	}
 }
@@ -79,25 +92,19 @@ function template01() {
 	document.getElementById("tama").src = "tamagotchi_base01.png";
 }
 
-//pet type
-function hamtaro() {
-	pet.type = "hamtaro_01";
-	if (pet.age==0) {
-		document.getElementById("pet").src = pet.type + ".png";
-	}
-}
-function pettype() {
-	pet.type = "typehere";
-	if (pet.age==0) {
-		document.getElementById("pet").src = pet.type + ".png";
+function pettype(type) {
+	pet.type = type;
+	if (pet.alive=="false") {
+		document.getElementById("pet").src = pet.type + "_dead.png";
+	} else {
+		document.getElementById("pet").src = pet.type + ".gif";
 	}
 }
 
-//animations to have
-/*
-	young - idle, feed, death by overeating, starvation, dead sprite
-	adult - idle, feed, death by overeating, starvation, dead sprite
-	elder - idle, feed, death by overeating, starvation, death by old age, dead sprite
-	
-	maybe two-three options for different pets
-*/
+function idle() {
+	if (pet.alive=="true") {
+		document.getElementById("pet").src = pet.type + ".gif";
+	} else {
+		document.getElementById("pet").src = pet.type + "_dead.png";
+	}
+}
