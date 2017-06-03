@@ -38,9 +38,12 @@ function updateHunger() {
 	if (pet.fullness<=0) {
 		clearInterval(hungry);
 		clearInterval(old);
-		pet.alive="false";
 		//death animation
-		alert("Your pet has died of starvation.");
+		if (pet.alive=="true") {
+			document.getElementById("pet").src = pet.type + "/death.gif";
+			pet.alive="false";
+		}
+		//alert("Your pet has died of starvation.");
 		document.getElementById("status").innerHTML = "status: DEAD [starvation]";
 	}
 }
@@ -51,20 +54,19 @@ function feed() {
 		clearInterval(old);
 		//death animation
 		if (pet.alive=="true") {
-			document.getElementById("pet").src = pet.type + "_death.gif";
+			document.getElementById("pet").src = pet.type + "/death.gif";
 			pet.alive="false";
 		}
 		document.getElementById("status").innerHTML = "status: DEAD [overfed]";
-	} else if (pet.fullness>80) {
-		//feeding animation
-		 document.getElementById("pet").src = pet.type + "_feed.gif";
-		pet.fullness = 100;
-		 setTimeout(idle, 1000);
 	} else {
 		//feeding animation
-		 document.getElementById("pet").src = pet.type + "_feed.gif";
-		pet.fullness+=20;
-		 x = setTimeout(idle, 1000);
+		 document.getElementById("pet").src = pet.type + "/feed.gif";
+		 if (pet.fullness>80) {
+			 pet.fullness = 100;
+		 } else {
+			 pet.fullness+=20;
+		 }
+		 setTimeout(idle, 1000);
 	}
 }
 
@@ -76,7 +78,7 @@ function updateAge() {
 		clearInterval(hungry);
 		//death animation
 		if (pet.alive=="true") {
-			document.getElementById("pet").src = pet.type + "_death.gif";
+			document.getElementById("pet").src = pet.type + "/death.gif";
 			pet.alive="false";
 		}
 		//alert("Your pet has died of old age.");
@@ -84,27 +86,23 @@ function updateAge() {
 	}
 }
 
-//templates
-function template00() {
-	document.getElementById("tama").src = "tamagotchi_base.png";
-}
-function template01() {
-	document.getElementById("tama").src = "tamagotchi_base01.png";
+function template(num) {
+	document.getElementById("tama").src = "tama/tamagotchi" + num + ".png";
 }
 
 function pettype(type) {
 	pet.type = type;
 	if (pet.alive=="false") {
-		document.getElementById("pet").src = pet.type + "_dead.png";
+		document.getElementById("pet").src = pet.type + "/dead.png";
 	} else {
-		document.getElementById("pet").src = pet.type + ".gif";
+		document.getElementById("pet").src = pet.type + "/idle.gif";
 	}
 }
 
 function idle() {
 	if (pet.alive=="true") {
-		document.getElementById("pet").src = pet.type + ".gif";
+		document.getElementById("pet").src = pet.type + "/idle.gif";
 	} else {
-		document.getElementById("pet").src = pet.type + "_dead.png";
+		document.getElementById("pet").src = pet.type + "/dead.png";
 	}
 }
