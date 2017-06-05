@@ -52,6 +52,7 @@ img#pet {
 
 button#start {
 	background-color: rgb(166, 166, 166);
+	border-radius: 8px;
 	width:8em;
 	height:8em;
 	margin-right: 300px ;
