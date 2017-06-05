@@ -3,6 +3,7 @@ body {
 	font-size: 1.5em;
 	font-family: arial;
 }
+
 div#info {
 	text-align:center;
 }
@@ -43,7 +44,17 @@ img {
 	top: 0;
 	bottom: 0;
 }
+
 img#pet {
-	width:100px;
-	height:100px;
+
+	width:80px;
+	height:80px;
+}
+
+button#start {
+	background-color: rgb(166, 166, 166);
+	border-radius: 8px;
+	width:8em;
+	height:8em;
+	margin-right: 300px ;
 }

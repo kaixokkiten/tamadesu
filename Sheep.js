@@ -10,6 +10,7 @@ function startGame() {
 	$("#start").hide();
 	hungry = setInterval(updateHunger, 400);
 	old = setInterval(updateAge, 1000); //once per second
+	console.log(window.innerWidth);
 }
 
 function updateHunger() {
