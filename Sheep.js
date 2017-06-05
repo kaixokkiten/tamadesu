@@ -8,7 +8,7 @@ var pet = {
 
 function startGame() {
 	$("#start").hide();
-	hungry = setInterval(updateHunger, 500); //twice per second
+	hungry = setInterval(updateHunger, 400);
 	old = setInterval(updateAge, 1000); //once per second
 }
 
@@ -19,7 +19,7 @@ function updateHunger() {
 		clearInterval(hungry);
 		clearInterval(old);
 		if (pet.alive=="true") {
-			document.getElementById("pet").src = "blob/death.gif";
+			document.getElementById("pet").src = pet.type + "/death.gif";
 			pet.alive="false";
 		}
 		document.getElementById("status").innerHTML = "status: DEAD [starvation]";
@@ -31,12 +31,12 @@ function feed() {
 		clearInterval(hungry);
 		clearInterval(old);
 		if (pet.alive=="true") {
-			document.getElementById("pet").src = "blob/death.gif";
+			document.getElementById("pet").src = pet.type + "/death.gif";
 			pet.alive="false";
 		}
 		document.getElementById("status").innerHTML = "status: DEAD [overfed]";
 	} else {
-		 document.getElementById("pet").src = "blob/feed.gif";
+		 document.getElementById("pet").src = pet.type + "/feed.gif";
 		 if (pet.fullness>80) {
 			 pet.fullness = 100;
 		 } else {
@@ -53,10 +53,17 @@ function updateAge() {
 		clearInterval(old);
 		clearInterval(hungry);
 		if (pet.alive=="true") {
-			document.getElementById("pet").src = "blob/death.gif";
+			document.getElementById("pet").src = pet.type + "/death.gif";
 			pet.alive="false";
 		}
 		document.getElementById("status").innerHTML = "status: DEAD [old age]";
+	}
+}
+
+function petit() {
+	if (pet.alive=="true") {
+		document.getElementById("pet").src = pet.type + "/pet.gif";
+		setTimeout(idle, 4000);
 	}
 }
 
@@ -75,8 +82,8 @@ function pettype(type) {
 
 function idle() {
 	if (pet.alive=="true") {
-		document.getElementById("pet").src = "blob/idle.gif";
+		document.getElementById("pet").src = pet.type + "/idle.gif";
 	} else {
-		document.getElementById("pet").src = "blob/dead.png";
+		document.getElementById("pet").src = pet.type + "/dead.png";
 	}
 }
