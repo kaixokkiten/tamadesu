@@ -1,0 +1,73 @@
+body {
+	background-color:black;
+	font-size: 1.5em;
+	font-family: arial;
+}
+
+div#info {
+	text-align:center;
+}
+
+div#rules {
+	font-size: .8em;
+}
+
+div.meter {
+	width:200px;
+	height:20px;
+	background-color:white;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	
+	font-size: 0.7em;
+	color:black;
+	font-weight: bold;
+}
+
+div#fullness_meter {
+	margin-top:auto;
+	top: 650px;
+}
+
+div#fun_meter {
+	margin-top:auto;
+	top: 700px;
+}
+
+p {
+	color:white;
+}
+
+img {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+img#pet {
+
+	width:80px;
+	height:80px;
+}
+
+button {
+	font-style: italic;
+	border-radius: 8px;
+}
+
+button#start {
+	/*background-color: transparent;*/
+	width:8em;
+	height:8em;
+	/*margin-right: 300px;*/
+	position: relative;
+}
