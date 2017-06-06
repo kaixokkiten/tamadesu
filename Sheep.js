@@ -115,3 +115,14 @@ function idle() {
 		document.getElementById("pet").src = pet.type + "/dead.png";
 	}
 }
+
+// experimental shit! may not work!!
+function jump() {
+    console.log("jump");
+	var x = 0;
+	var interval = setInterval(function() {
+	    x++;
+	    $('#image1').css('top', 410 - (-0.2 * x * (x - 50)));
+	    if(x >= 50) clearInterval(interval);
+  	}, 20);
+};

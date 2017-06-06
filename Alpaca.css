@@ -61,12 +61,12 @@ img#pet {
 
 button {
 	font-style: italic;
-	background-color: rgb(166, 166, 166);
 	border-radius: 8px;
 }
 
 button#start {
+	/*background-color: transparent;*/
 	width:8em;
 	height:8em;
-	margin-right: 300px ;
+	/*margin-right: 300px;*/
 }
