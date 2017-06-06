@@ -69,4 +69,5 @@ button#start {
 	width:8em;
 	height:8em;
 	/*margin-right: 300px;*/
+	position: relative;
 }
