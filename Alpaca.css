@@ -12,21 +12,29 @@ div#rules {
 	font-size: .8em;
 }
 
-div#fullness_meter {
+div.meter {
 	width:200px;
 	height:20px;
 	background-color:white;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top:auto;
 	left: 0;
 	right: 0;
-	top: 650px;
 	
 	font-size: 0.7em;
 	color:black;
 	font-weight: bold;
+}
+
+div#fullness_meter {
+	margin-top:auto;
+	top: 650px;
+}
+
+div#fun_meter {
+	margin-top:auto;
+	top: 700px;
 }
 
 p {
@@ -51,9 +59,13 @@ img#pet {
 	height:80px;
 }
 
-button#start {
+button {
+	font-style: italic;
 	background-color: rgb(166, 166, 166);
 	border-radius: 8px;
+}
+
+button#start {
 	width:8em;
 	height:8em;
 	margin-right: 300px ;
