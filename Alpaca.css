@@ -1,10 +1,19 @@
-body {
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color:black;
+    font-size: 1.5em;
+    font-family: arial;
+}
+
+/*body {
 	background-color:black;
 	font-size: 1.5em;
 	font-family: arial;
 }
-
-div#info {
+*/
+div#console {
 	text-align:center;
 }
 
@@ -42,21 +51,18 @@ p {
 }
 
 img {
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: auto;
+	margin-left: 0;
+	margin-right:0;
+	margin-top: 12%;
 	margin-bottom: auto;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
 }
 
 img#pet {
-
-	width:80px;
-	height:80px;
+	position: absolute;
+	top:15%;
+	margin-left: 8%;
+	width:200px;
+	height:200px;
 }
 
 button {
@@ -65,9 +71,54 @@ button {
 }
 
 button#start {
-	/*background-color: transparent;*/
-	width:8em;
-	height:8em;
+	float: left;
+   	position: absolute;
+   	left: 5%;
+    top: 5%;
+   	z-index: 1000;
+	background-color: rgba(109, 111, 114, .8);
+	border: none;
+	width:90%;
+	height:90%;
+	font-size: 8em;
+	color: white;
+	font-weight: bold;
 	/*margin-right: 300px;*/
-	position: relative;
+	/*position: relative;*/
+}
+
+.startoverlay{
+	position:absolute;
+    left:0px; 
+    right:0px;
+    height: 90%px;
+}
+
+.sidebar{
+	background-color: red;
+	/*position:absolute;*/
+	float:left;
+    left:0px; 
+    top:10%; 
+    bottom:0px;
+    width:30%;
+}
+
+.main{
+	background-color: blue;
+	/*position:absolute;*/
+	float:right;
+    left:0%; 
+    right:0%;
+    height: 80%;
+}
+
+.status {
+	background-color: green;
+    /*position:absolute;*/
+    float:right;
+    width: 70%;
+    text-align: center;
+    right:50%;
+    height:10%;
 }
