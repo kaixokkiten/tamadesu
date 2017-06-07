@@ -60,7 +60,7 @@ img {
 img#pet {
 	position: absolute;
 	top:15%;
-	margin-left: 8%;
+	margin-left: -15%;
 	width:200px;
 	height:200px;
 }

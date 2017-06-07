@@ -120,9 +120,10 @@ function idle() {
 function jump() {
     console.log("jump");
 	var x = 0;
+	var h = window.innerHeight * .12;
 	var interval = setInterval(function() {
 	    x++;
-	    $('#image1').css('top', 410 - (-0.2 * x * (x - 50)));
+	    $('#pet').css('top', h - (-0.2 * x * (x - 50)));
 	    if(x >= 50) clearInterval(interval);
   	}, 20);
 };
