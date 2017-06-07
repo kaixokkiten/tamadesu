@@ -17,7 +17,12 @@ function startGame() {
 
 function updateHunger() {
 	pet.fullness-=1;
+	console.log(pet.fullness);
 	document.getElementById("fullness_meter").style.width = pet.fullness*2 + "px";
+	if (pet.fullness < 50) {
+		$("#fullness_meter").css("background-color", "#e20431");
+		console.log("bar should be red, this block has run");
+	}
 	if (pet.fullness<=0) {
 		clearInterval(hungry);
 		clearInterval(old);
@@ -27,6 +32,7 @@ function updateHunger() {
 			pet.alive="false";
 		}
 		document.getElementById("status").innerHTML = "status: DEAD [starvation]";
+		console.log("pet dead! pet.fullness=0");
 	}
 }
 
@@ -71,7 +77,7 @@ function updateAge() {
 function updateFun() {
 	pet.fun-=1;
 	document.getElementById("fun_meter").style.width = pet.fun*2 + "px";
-	if (pet.fun<=0) {
+	if (pet.fun <= 0) {
 		clearInterval(hungry);
 		clearInterval(old);
 		clearInterval(fun);

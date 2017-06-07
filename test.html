@@ -2,17 +2,36 @@
 <html>
     <head>  
         <meta charset="utf-8" />
+        <style type="text/css">
+            #top{
+                float:right; 
+                background: blue; 
+                width: 70%; 
+                height:20%;
+            }
+
+            #left{
+                float:left; 
+                width: 30%; 
+                height: 90%; 
+                background: red;
+            }
+
+            #main{
+                float:right; 
+                width:70%; 
+                height: 70%; 
+                background: yellow;
+            }
+        </style>
         <title> Flappy Bird Clone </title>
     </head>
     <body>
-<div style="width:500px;">
-	<div style="float:right; background: blue; width:350px; height: 50px;">TOP</div>
-
-	<div style="float:left; width: 150px; height: 150px; background: red;">LEFT</div>
-
-	<div style="float:right; width:350px; height: 100px; background: yellow;">MAIN</div>
-
-	<div style="clear:both;"></div>
-</div>
+        <div style="width:window.innerWidth; width: 100%; height:window.innerHeight; height:100%">
+        	<div id="top">TOP</div>
+        	<div id="left">LEFT</div>
+        	<div id="main">MAIN</div>
+        	<div style="clear:both;"></div>
+        </div>
     </body>  
 </html>  
