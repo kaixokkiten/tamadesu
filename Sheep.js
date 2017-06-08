@@ -118,11 +118,15 @@ function idle() {
 
 // experimental shit! may not work!!
 function jump() {
-    console.log("jump");
-	var x = 0;
+	if (pet.alive == "true") {
+		console.log('jump');
+		var x = 0;
+
 	var interval = setInterval(function() {
-	    x++;
-	    $('#image1').css('top', 410 - (-0.2 * x * (x - 50)));
-	    if(x >= 50) clearInterval(interval);
-  	}, 20);
-};
+		x++;
+		$('#pet').css('top', 300 - (-0.1 * x * (x - 60)));
+
+		if(x >= 60) clearInterval(interval);
+		}, 20);
+	}
+}

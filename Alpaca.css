@@ -13,14 +13,6 @@ body {
 	font-family: arial;
 }
 
-div#console {
-	text-align:center;
-}
-
-div#rules {
-	font-size: .8em;
-}
-
 div.meter {
 	width:200px;
 	height:20px;
@@ -28,6 +20,7 @@ div.meter {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top:auto;
 	left: 0;
 	right: 0;
 	
@@ -37,13 +30,11 @@ div.meter {
 }
 
 div#fullness_meter {
-	margin-top:auto;
-	top: 650px;
+	top: 460%;
 }
 
 div#fun_meter {
-	margin-top:auto;
-	top: 700px;
+	top: 490%;
 }
 
 p {
@@ -51,18 +42,19 @@ p {
 }
 
 img {
-	margin-left: 0;
-	margin-right:0;
-	margin-top: 12%;
+	position:absolute;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top: auto;
 	margin-bottom: auto;
+	left:0;
+	right:0;
 }
 
-img#pet {
-	position: absolute;
-	top:15%;
-	margin-left: 8%;
-	width:200px;
-	height:200px;
+#pet {
+	width: 150px;
+	height: 150px;
+	top:300px;
 }
 
 button {
@@ -97,25 +89,30 @@ button#start {
 .sidebar{
 	position:absolute;
 	/*float:left;*/
-    left:0px; 
-    top:10%; 
+    left:5px; 
+    top:20%; 
     bottom:0px;
     width:30%;
+	font-size: .8em;
 }
 
 .main{
-	position:absolute;
-	/*float:right;*/
+	position:relative;
+	float:right;
     left:0%; 
     right:0%;
     height: 80%;
+	width:100%;
+	text-align:center;
 }
 
+/** not in use
 .status {
     position:absolute;
-    /*float:right;*/
+    /*float:right;* /
     width: 70%;
     text-align: center;
     left:15%;
     height:10%;
 }
+**/
