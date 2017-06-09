@@ -26,6 +26,7 @@ function updateHunger() {
 		$("#fullness_meter").css("background-color", "white");
 	}
 	if (pet.fullness<=0) {
+		$("#fun_meter").css("background-color", "grey");
 		clearInterval(hungry);
 		clearInterval(old);
 		clearInterval(fun);
@@ -40,6 +41,8 @@ function updateHunger() {
 
 function feed() {
 	if (pet.fullness>95) {
+		$("#fullness_meter").css("background-color", "grey");
+		$("#fun_meter").css("background-color", "grey");
 		clearInterval(hungry);
 		clearInterval(old);
 		clearInterval(fun);
@@ -65,6 +68,8 @@ function updateAge() {
 	pet.age+=1;
 	document.getElementById("age").innerHTML = "age: " + pet.age;
 	if (pet.age==100) {
+		$("#fullness_meter").css("background-color", "grey");
+		$("#fun_meter").css("background-color", "grey");
 		clearInterval(old);
 		clearInterval(hungry);
 		clearInterval(fun);
@@ -80,6 +85,7 @@ function updateFun() {
 	pet.fun-=1;
 	document.getElementById("fun_meter").style.width = pet.fun*2 + "px";
 	if (pet.fun <= 0) {
+		$("#fullness_meter").css("background-color", "grey");
 		clearInterval(hungry);
 		clearInterval(old);
 		clearInterval(fun);
