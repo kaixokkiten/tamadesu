@@ -16,6 +16,7 @@ function startGame() {
 }
 
 function updateHunger() {
+if (document.hasFocus()) {
 	pet.fullness-=1;
 	console.log(pet.fullness);
 	document.getElementById("fullness_meter").style.width = pet.fullness*2 + "px";
@@ -37,6 +38,7 @@ function updateHunger() {
 		document.getElementById("status").innerHTML = "status: DEAD [starvation]";
 		console.log("pet dead! pet.fullness=0");
 	}
+}
 }
 
 function feed() {
@@ -65,6 +67,7 @@ function feed() {
 }
 
 function updateAge() {
+if (document.hasFocus()) {
 	pet.age+=1;
 	document.getElementById("age").innerHTML = "age: " + pet.age;
 	if (pet.age==100) {
@@ -80,8 +83,10 @@ function updateAge() {
 		document.getElementById("status").innerHTML = "status: DEAD [old age]";
 	}
 }
+}
 
 function updateFun() {
+if (document.hasFocus()) {
 	pet.fun-=1;
 	document.getElementById("fun_meter").style.width = pet.fun*2 + "px";
 	if (pet.fun <= 0) {
@@ -95,6 +100,7 @@ function updateFun() {
 		}
 		document.getElementById("status").innerHTML = "status: DEAD [bored/unhappy]";
 	}
+}
 }
 
 function petit() {
