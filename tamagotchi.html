@@ -21,12 +21,10 @@
 	</head>
 	<body>
 
-		<div class="start_overlay">--  <button id="start" onclick="startGame()">Click to start.</button></div>
-		<div class="status">
+		<div class="start_overlay"><button id="start" onclick="startGame()">Click to start.</button></div>
+		<div class="main">
 			<p id="status">status: ALIVE<p>
 			<p id="age">age: 0<p>
-		</div>
-		<div id="console" class="main">
 			<img src="tama/tamagotchi00.png" id="tama" usemap="buttons">
 			<img src="blob/idle.gif" id="pet" alt="thepet">
 			<div class="meter" id="fullness_meter">FULLNESS</div>
@@ -39,15 +37,16 @@
 			<area shape="circle" coords="252,376,27" onclick="jump()">
 		</map>
 		
-		<div id="rules"  class= "sidebar">
-		<p>Pet can die of old age</p>
-		<p>Pet can die of starvation</p>
-		<p>Pet can die of overeating</p>
-		<p>Pet can die of boredom/unhappiness</p>
-		<p><br /></p>
-		<p>Left button to pet</p>
-		<p>Middle button to feed</p>
-		<p><br /><br />Choose a different theme if you like! </p>
+		<div class="sidebar">
+		<p>Pet can die of:</p>
+		<p> -old age</p>
+		<p> -starvation</p>
+		<p> -overeating</p>
+		<p> -boredom/unhappiness</p>
+		<p>~~~~~~</p>
+		<p>Left button to pet.</p>
+		<p>Middle button to feed.</p>
+		<p>~~~~~~<br /><br />choose a different theme if you like! </p>
 		<button onclick="template('00')">Default</button>
 		<button onclick="template('01')">Stars</button>
 		<button onclick="template('02')">Hills and Flowers</button>

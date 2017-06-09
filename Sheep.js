@@ -22,6 +22,8 @@ function updateHunger() {
 	if (pet.fullness < 50) {
 		$("#fullness_meter").css("background-color", "#e20431");
 		console.log("bar should be red, this block has run");
+	} else {
+		$("#fullness_meter").css("background-color", "white");
 	}
 	if (pet.fullness<=0) {
 		clearInterval(hungry);
@@ -122,8 +124,8 @@ function idle() {
 	}
 }
 
-// experimental shit! may not work!!
 function jump() {
+/*
     console.log("jump");
 	var x = 0;
 	var h = window.innerHeight * .12;
@@ -133,3 +135,16 @@ function jump() {
 	    if(x >= 50) clearInterval(interval);
   	}, 20);
 };
+*/
+	if (pet.alive == "true") {
+		console.log('jump');
+		var x = 0;
+
+	var interval = setInterval(function() {
+		x++;
+		$('#pet').css('top', 300 - (-0.1 * x * (x - 60)));
+
+		if(x >= 60) clearInterval(interval);
+		}, 20);
+	}
+}
