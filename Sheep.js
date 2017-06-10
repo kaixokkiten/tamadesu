@@ -20,7 +20,7 @@ if (document.hasFocus()) {
 	pet.fullness-=1;
 	console.log(pet.fullness);
 	document.getElementById("fullness_meter").style.width = pet.fullness*2 + "px";
-	if (pet.fullness < 50) {
+	if (pet.fullness < 40) {
 		$("#fullness_meter").css("background-color", "#e20431");
 		console.log("bar should be red, this block has run");
 	} else {
@@ -89,6 +89,11 @@ function updateFun() {
 if (document.hasFocus()) {
 	pet.fun-=1;
 	document.getElementById("fun_meter").style.width = pet.fun*2 + "px";
+	if (pet.fun < 40) {
+		$("#fun_meter").css("background-color", "#e20431");
+	} else {
+		$("#fun_meter").css("background-color", "white");
+	}
 	if (pet.fun <= 0) {
 		$("#fullness_meter").css("background-color", "grey");
 		clearInterval(hungry);
@@ -137,17 +142,6 @@ function idle() {
 }
 
 function jump() {
-/*
-    console.log("jump");
-	var x = 0;
-	var h = window.innerHeight * .12;
-	var interval = setInterval(function() {
-	    x++;
-	    $('#pet').css('top', h - (-0.2 * x * (x - 50)));
-	    if(x >= 50) clearInterval(interval);
-  	}, 20);
-};
-*/
 	if (pet.alive == "true") {
 		console.log('jump');
 		var x = 0;

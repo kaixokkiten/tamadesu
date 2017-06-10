@@ -105,14 +105,3 @@ button#start {
 	width:100%;
 	text-align:center;
 }
-
-/** not in use
-.status {
-    position:absolute;
-    /*float:right;* /
-    width: 70%;
-    text-align: center;
-    left:15%;
-    height:10%;
-}
-**/

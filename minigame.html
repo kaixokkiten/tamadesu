@@ -16,14 +16,12 @@
 		<script src="processing.js" type="text/javascript"></script> 
 		<!-- use this above block in case internet goes down ohh nooo -->
 
-		<script src="minijs.js"></script> <!--custom javascript yay-->
-		<link rel="stylesheet" href="minicss.css"> <!-- CSS style sheet -->
+		<script src="minijs.js"></script>
+		<link rel="stylesheet" href="minicss.css">
 	</head>
 	<body>
-		<div class="start_overlay"><button id="start" onclick="startGame()">Click to start, and click anywhere to jump.</button></div>
-		<div class="start_overlay"><button id="jmp" onclick="jump()"></button></div>
-		<div class="main">
-			<img src="blob/idle.gif" id="pet" alt="thepet">
-		</div>
+		<div class="start_overlay"><button id="start" onclick="startMiniGame()">Click to start, and click anywhere to accelerate.</button></div>
+		<div class="start_overlay"><button id="endgame" onclick=window.close()>click to exit</button></div>
+<button id="jmp" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.1)"></button>
 	</body>
 </html>
